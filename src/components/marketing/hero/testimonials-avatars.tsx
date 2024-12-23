@@ -28,11 +28,11 @@ export function TestimonialsAvatars() {
 			<div className="flex flex-col items-center md:items-start">
 				<div className="text-sm font-semibold">Loved by Founders</div>
 				<div className="flex gap-1">
-					{[...Array(5)].map((_, i) => (
+					{Array.from({ length: 5 }, (_, i) => (
 						<Star
 							key={i}
 							className="h-4 w-4 fill-orange-400 text-orange-400"
-						/>
+							/>
 					))}
 				</div>
 			</div>

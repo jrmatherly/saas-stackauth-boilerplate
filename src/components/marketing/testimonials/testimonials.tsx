@@ -30,7 +30,6 @@ export interface TestimonialCardProps {
 	img?: string;
 	description: React.ReactNode;
 	className?: string;
-	[key: string]: any;
 }
 
 export const TestimonialCard = ({
@@ -39,7 +38,6 @@ export const TestimonialCard = ({
 	img,
 	role,
 	className,
-	...props // Capture the rest of the props
 }: TestimonialCardProps) => (
 	<Card
 		className={cn(
@@ -48,7 +46,6 @@ export const TestimonialCard = ({
 			" border border-primary/60 dark:border-primary/20",
 			className,
 		)}
-		{...props} // Spread the rest of the props here
 	>
 		<div className="select-none font-normal text-neutral-700 text-sm dark:text-neutral-200">
 			{description}

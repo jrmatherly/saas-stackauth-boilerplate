@@ -1,4 +1,4 @@
-import { type ReactNode } from "react";
+import { type ReactNode, type ElementType } from "react";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 import { cn } from "@/lib/utils";
@@ -13,7 +13,7 @@ type BentoCardProps = {
   name: string;
   className: string;
   background: ReactNode;
-  Icon: any;
+  Icon: ElementType;
   description: string;
   href: string;
   cta: string;
