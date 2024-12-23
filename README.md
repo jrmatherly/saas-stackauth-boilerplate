@@ -140,7 +140,19 @@ These environment variables are optional but enable additional features:
 ### Setup Instructions
 
 1. Copy `.env.example` to `.env`
-2. For Stack Auth credentials:
+
+2. Set up the database:
+   - Make sure Docker is installed and running
+   - Start the local database using the provided script:
+     ```bash
+     ./start-database.sh
+     ```
+   - Push the database schema:
+     ```bash
+     pnpm db:push
+     ```
+
+3. For Stack Auth credentials:
    - Visit [Stack Auth Documentation](https://docs.stack-auth.com/overview)
    - Follow their setup guide to obtain your project credentials
    - Fill in the corresponding environment variables
