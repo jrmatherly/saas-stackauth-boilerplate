@@ -106,8 +106,6 @@ src/
 * Implement proper error handling with tRPC
 * Use React Query features through tRPC for data management
 
-For more detailed guidelines, check the `cursorrules` file in the project root.
-
 ## Related Projects
 
 🚀 **[NativeExpress](https://native.express?ref=saas-boilerplate)** - The ultimate React Native & Expo boilerplate with all the features you need to build production-ready mobile apps.
@@ -120,3 +118,29 @@ For more detailed guidelines, check the `cursorrules` file in the project root.
 </p>
 
 > This project is maintained by [Robin Faraj](https://x.com/robin_faraj?ref=saas-boilerplate)
+
+## Environment Variables
+
+### Required Environment Variables
+The following environment variables are required for the application to function properly:
+
+- `DATABASE_URL`: PostgreSQL connection URL
+- `NEXT_PUBLIC_STACK_PROJECT_ID`: Your Stack Auth project ID
+- `NEXT_PUBLIC_STACK_PUBLISHABLE_CLIENT_KEY`: Your Stack Auth publishable client key
+- `STACK_SECRET_SERVER_KEY`: Your Stack Auth secret server key
+
+### Optional Environment Variables
+These environment variables are optional but enable additional features:
+
+- `RESEND_API_KEY`: For email functionality
+- `RESEND_AUDIENCE_ID`: For newsletter management
+- `SENTRY_ORG` and `SENTRY_PROJECT`: For error tracking
+- `NEXT_PUBLIC_POSTHOG_HOST` and `NEXT_PUBLIC_POSTHOG_KEY`: For analytics
+
+### Setup Instructions
+
+1. Copy `.env.example` to `.env`
+2. For Stack Auth credentials:
+   - Visit [Stack Auth Documentation](https://docs.stack-auth.com/overview)
+   - Follow their setup guide to obtain your project credentials
+   - Fill in the corresponding environment variables
