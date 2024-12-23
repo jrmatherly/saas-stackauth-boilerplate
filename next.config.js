@@ -23,6 +23,16 @@ const config = {
         protocol: "https",
         hostname: "avatar.vercel.sh",
       },
+      {
+        // vercel profile images
+        protocol: "https",
+        hostname: "startup-template-sage.vercel.app",
+      },
+      {
+        // supabase profile images
+        protocol: "https",
+        hostname: "qpdwualqgmqaxfgoapyc.supabase.co",
+      },
     ],
   },
 };

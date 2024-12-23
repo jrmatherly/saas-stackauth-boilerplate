@@ -3,20 +3,20 @@ import AvatarCircles from "../../ui/avatar-circles";
 
 const avatars = [
 	{
-	  imageUrl: "https://avatars.githubusercontent.com/u/16860528",
-	  profileUrl: "https://github.com/dillionverma",
+	  imageUrl: "https://qpdwualqgmqaxfgoapyc.supabase.co/storage/v1/object/public/appboilerplate/avatars/Profile%20Facelift.jpg?t=2024-12-23T11%3A27%3A14.031Z",
+	  profileUrl: "https://x.com/robin_faraj",
 	},
 	{
-	  imageUrl: "https://avatars.githubusercontent.com/u/20110627",
-	  profileUrl: "https://github.com/tomonarifeehan",
+	  imageUrl: "https://qpdwualqgmqaxfgoapyc.supabase.co/storage/v1/object/public/appboilerplate/landingpage/andrei.jpg",
+	  profileUrl: "https://x.com/AndreiHudovich",
 	},
 	{
-	  imageUrl: "https://avatars.githubusercontent.com/u/106103625",
-	  profileUrl: "https://github.com/BankkRoll",
+	  imageUrl: "https://qpdwualqgmqaxfgoapyc.supabase.co/storage/v1/object/public/appboilerplate/landingpage/miguel_new.jpg?t=2024-12-23T11%3A31%3A29.278Z",
+	  profileUrl: "https://x.com/fullstackmiguel",
 	},
 	{
-	  imageUrl: "https://avatars.githubusercontent.com/u/59228569",
-	  profileUrl: "https://github.com/safethecode",
+	  imageUrl: "https://qpdwualqgmqaxfgoapyc.supabase.co/storage/v1/object/public/appboilerplate/landingpage/adam.jpg?t=2024-12-23T11%3A31%3A19.946Z",
+	  profileUrl: "https://x.com/AdamBartas",
 	},
   ];
   
