@@ -14,6 +14,12 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/robinsadeghpour/saas-boilerplate/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License" />
+  </a>
+</p>
+
+<p align="center">
   <i>Looking for a mobile app boilerplate? Check out <a href="https://native.express?ref=saas-boilerplate">NativeExpress</a> - The ultimate React Native & Expo boilerplate!</i>
 </p>
 
