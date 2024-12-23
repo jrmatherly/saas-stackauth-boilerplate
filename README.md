@@ -113,4 +113,4 @@ For more detailed guidelines, check the `cursorrules` file in the project root.
   <a href="https://www.youtube.com/@robinfaraj?sub_confirmation=1">Subscribe on YouTube</a>
 </p>
 
-> This project is maintained by [Robin Sadeghpour](https://x.com/robin_faraj?ref=saas-boilerplate)
+> This project is maintained by [Robin Faraj](https://x.com/robin_faraj?ref=saas-boilerplate)
