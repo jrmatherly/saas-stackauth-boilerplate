@@ -11,6 +11,7 @@
 
     /* Strictness */
     "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "noUncheckedIndexedAccess": true,
     "checkJs": true,
 
@@ -30,13 +31,15 @@
     }
   },
   "include": [
-    ".eslintrc.cjs",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
+    "**/*.mjs",
     "**/*.js",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "next.config.ts",
+    "next-sitemap.config.cjs"
   ],
   "exclude": ["node_modules"]
 }

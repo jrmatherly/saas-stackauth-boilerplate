@@ -1,30 +1,38 @@
-"use client"
+'use client';
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Container } from "@/components/ui/container"
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
-import { Menu } from "lucide-react"
-import { useState, useEffect } from "react"
-import { cn } from "@/lib/utils"
-import { useUser } from "@stackframe/stack"
+import { Button } from '@/components/ui/button';
+import { Container } from '@/components/ui/container';
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
+import { cn } from '@/lib/utils';
+import { useUser } from '@stackframe/stack';
+import { Menu } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const menuItems = [
-  { label: "Docs", href: "/docs" },
-  { label: "Blog", href: "/blog" },
-  { label: "Pricing", href: "/pricing" },
-]
+  { label: 'Docs', href: '/docs' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Pricing', href: '/pricing' },
+];
 
 export function NavBar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const pathname = usePathname()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
   const user = useUser();
 
   // Close mobile menu on route change
+  // We're intentionally only running this effect when the pathname changes
+  // and ignoring the linter warning about the dependency array
+  // biome-ignore lint/correctness/useExhaustiveDependencies: We only want this to run when pathname changes
   useEffect(() => {
-    setMobileMenuOpen(false)
-  }, [pathname])
+    setMobileMenuOpen(false);
+  }, [pathname]);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -39,7 +47,7 @@ export function NavBar() {
 
           {/* Navigation Links - Center */}
           <nav className="hidden sm:w-1/3 justify-center items-center space-x-6 sm:flex">
-            {menuItems.map((item) => (
+            {menuItems.map(item => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -75,18 +83,17 @@ export function NavBar() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
-                
                 <SheetTitle className="hidden">Menu</SheetTitle>
                 <div className="flex h-full flex-col justify-between py-6">
                   {/* Top section with menu items */}
                   <div className="flex flex-col space-y-4">
-                    {menuItems.map((item) => (
+                    {menuItems.map(item => (
                       <Link
                         key={item.href}
                         href={item.href}
                         className={cn(
-                          "text-sm font-medium text-muted-foreground hover:text-foreground",
-                          pathname === item.href && "text-foreground"
+                          'text-sm font-medium text-muted-foreground hover:text-foreground',
+                          pathname === item.href && 'text-foreground'
                         )}
                       >
                         {item.label}
@@ -118,5 +125,5 @@ export function NavBar() {
         </div>
       </Container>
     </header>
-  )
+  );
 }

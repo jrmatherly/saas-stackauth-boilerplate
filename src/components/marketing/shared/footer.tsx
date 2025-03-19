@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { Container } from "@/components/ui/container"
+import { Container } from '@/components/ui/container';
+import Link from 'next/link';
 
 export function Footer() {
   return (
@@ -18,13 +18,22 @@ export function Footer() {
           <div className="space-y-3">
             <h4 className="font-medium">Product</h4>
             <nav className="flex flex-col space-y-2">
-              <Link href="/docs" className="text-sm text-muted-foreground hover:text-foreground">
+              <Link
+                href="/docs"
+                className="text-sm text-muted-foreground hover:text-foreground"
+              >
                 Documentation
               </Link>
-              <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground">
+              <Link
+                href="/blog"
+                className="text-sm text-muted-foreground hover:text-foreground"
+              >
                 Blog
               </Link>
-              <Link href="/pricing" className="text-sm text-muted-foreground hover:text-foreground">
+              <Link
+                href="/pricing"
+                className="text-sm text-muted-foreground hover:text-foreground"
+              >
                 Pricing
               </Link>
             </nav>
@@ -34,10 +43,16 @@ export function Footer() {
           <div className="space-y-3">
             <h4 className="font-medium">Legal</h4>
             <nav className="flex flex-col space-y-2">
-              <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground">
+              <Link
+                href="/privacy"
+                className="text-sm text-muted-foreground hover:text-foreground"
+              >
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground">
+              <Link
+                href="/terms"
+                className="text-sm text-muted-foreground hover:text-foreground"
+              >
                 Terms of Service
               </Link>
             </nav>
@@ -45,5 +60,5 @@ export function Footer() {
         </div>
       </Container>
     </footer>
-  )
+  );
 }

@@ -1,11 +1,12 @@
-import React from "react";
+// biome-ignore lint/correctness/noUnusedImports: not used directly
+import React from 'react';
 
 interface SectionTitleProps {
   name: string;
   title: string;
 }
 
-export const SectionTitle = ({name, title}: SectionTitleProps) => {
+export const SectionTitle = ({ name, title }: SectionTitleProps) => {
   return (
     <div className="text-center mb-12">
       <h2 className="font-bold font-mono text-primary text-sm uppercase tracking-wider">

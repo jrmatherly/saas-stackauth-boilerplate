@@ -1,5 +1,5 @@
-import { Resend } from "resend";
-import { env } from "@/env";
+import { env } from '@/env';
+import { Resend } from 'resend';
 
 const resend = env.RESEND_API_KEY ? new Resend(env.RESEND_API_KEY) : null;
 const AUDIENCE_ID = env.RESEND_AUDIENCE_ID;
@@ -25,7 +25,7 @@ export type SendEmailResult = {
 };
 
 export async function sendEmail(
-  params: SendEmailParams,
+  params: SendEmailParams
 ): Promise<SendEmailResult> {
   if (!resend) {
     console.warn('Email service not configured: Missing RESEND_API_KEY');
@@ -36,22 +36,22 @@ export async function sendEmail(
 
   try {
     const data = await resend.emails.send({
-      from: "SaaS Boilerplate <newsletter@yourdomain.com>",
+      from: 'SaaS Boilerplate <newsletter@yourdomain.com>',
       to,
       subject,
       html,
-      text: text ?? html.replace(/<[^>]*>/g, ""),
+      text: text ?? html.replace(/<[^>]*>/g, ''),
     });
 
     return { success: true, data };
   } catch (error) {
-    console.error("Failed to send email:", error);
+    console.error('Failed to send email:', error);
     return { success: false, error };
   }
 }
 
 export async function addContactToNewsletter(
-  contact: NewsletterContact,
+  contact: NewsletterContact
 ): Promise<SendEmailResult> {
   if (!resend) {
     console.warn('Email service not configured: Missing RESEND_API_KEY');
@@ -59,7 +59,9 @@ export async function addContactToNewsletter(
   }
 
   if (!AUDIENCE_ID) {
-    console.warn('Newsletter service not configured: Missing RESEND_AUDIENCE_ID');
+    console.warn(
+      'Newsletter service not configured: Missing RESEND_AUDIENCE_ID'
+    );
     return { success: false, error: 'Newsletter service not configured' };
   }
 
@@ -75,7 +77,7 @@ export async function addContactToNewsletter(
 
     return { success: true, data };
   } catch (error) {
-    console.error("Failed to add contact:", error);
+    console.error('Failed to add contact:', error);
     return { success: false, error };
   }
 }

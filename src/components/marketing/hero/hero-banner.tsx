@@ -1,5 +1,5 @@
-import { LucideGift } from "lucide-react";
-import AnimatedShinyText from "@/components/ui/animated-shiny-text";
+import AnimatedShinyText from '@/components/ui/animated-shiny-text';
+import { LucideGift } from 'lucide-react';
 
 export default function HeroBanner() {
   return (

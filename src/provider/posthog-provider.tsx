@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import posthog from "posthog-js";
-import { PostHogProvider } from "posthog-js/react";
-import { useEffect } from "react";
-import { env } from "@/env";
+import { env } from '@/env';
+import posthog from 'posthog-js';
+import { PostHogProvider } from 'posthog-js/react';
+import { useEffect } from 'react';
 
 export function PosthogProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
@@ -14,7 +14,7 @@ export function PosthogProvider({ children }: { children: React.ReactNode }) {
     try {
       posthog.init(env.NEXT_PUBLIC_POSTHOG_KEY, {
         api_host: env.NEXT_PUBLIC_POSTHOG_HOST ?? 'https://app.posthog.com',
-        person_profiles: "identified_only",
+        person_profiles: 'identified_only',
         capture_pageview: false,
         capture_pageleave: true,
       });

@@ -1,5 +1,5 @@
-import { PostHog } from "posthog-node";
-import { env } from "@/env";
+import { env } from '@/env';
+import { PostHog } from 'posthog-node';
 
 // use this client for server side
 export default function PostHogClient(): PostHog | undefined {
@@ -14,7 +14,7 @@ export default function PostHogClient(): PostHog | undefined {
       flushInterval: 0,
     });
   } catch (error) {
-    console.error("Failed to initialize PostHog client:", error);
+    console.error('Failed to initialize PostHog client:', error);
     return undefined;
   }
 }

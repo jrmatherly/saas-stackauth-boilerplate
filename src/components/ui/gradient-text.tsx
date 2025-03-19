@@ -1,6 +1,6 @@
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils';
 
-type GradientTextProps = React.HTMLAttributes<HTMLSpanElement>
+type GradientTextProps = React.HTMLAttributes<HTMLSpanElement>;
 
 export function GradientText({ className, ...props }: GradientTextProps) {
   return (
@@ -11,5 +11,5 @@ export function GradientText({ className, ...props }: GradientTextProps) {
       )}
       {...props}
     />
-  )
-} 
+  );
+}

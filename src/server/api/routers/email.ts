@@ -1,10 +1,10 @@
-import { z } from "zod";
+import { addContactToNewsletter, sendEmail } from '@/lib/mail';
 import {
   createTRPCRouter,
   protectedProcedure,
   publicProcedure,
-} from "@/server/api/trpc";
-import { sendEmail, addContactToNewsletter } from "@/lib/mail";
+} from '@/server/api/trpc';
+import { z } from 'zod';
 
 export const emailRouter = createTRPCRouter({
   // Regular email sending
@@ -15,7 +15,7 @@ export const emailRouter = createTRPCRouter({
         subject: z.string(),
         html: z.string(),
         text: z.string().optional(),
-      }),
+      })
     )
     .mutation(async ({ input }) => {
       return sendEmail(input);
@@ -29,7 +29,7 @@ export const emailRouter = createTRPCRouter({
         firstName: z.string().optional(),
         lastName: z.string().optional(),
         data: z.record(z.unknown()).optional(),
-      }),
+      })
     )
     .mutation(async ({ input }) => {
       return addContactToNewsletter(input);

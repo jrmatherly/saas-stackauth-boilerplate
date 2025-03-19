@@ -1,10 +1,10 @@
-import { z } from "zod";
+import { z } from 'zod';
 
 import {
   createTRPCRouter,
   protectedProcedure,
   publicProcedure,
-} from "@/server/api/trpc";
+} from '@/server/api/trpc';
 
 export const postRouter = createTRPCRouter({
   hello: publicProcedure
@@ -27,7 +27,7 @@ export const postRouter = createTRPCRouter({
 
   getLatest: publicProcedure.query(async ({ ctx }) => {
     const post = await ctx.db.post.findFirst({
-      orderBy: { createdAt: "desc" },
+      orderBy: { createdAt: 'desc' },
     });
 
     return post ?? null;
